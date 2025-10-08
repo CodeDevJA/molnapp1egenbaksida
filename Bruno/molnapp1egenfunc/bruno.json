@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "molnapp1egenfunc",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
