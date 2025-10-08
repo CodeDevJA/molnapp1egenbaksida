@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "molnapp1egenbaksida": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7182",
+      "launchBrowser": false
+    }
+  }
+}
