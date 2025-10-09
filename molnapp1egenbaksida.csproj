@@ -1,20 +1,43 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Azure Functions .NET Isolated Worker Project -->
 
   <PropertyGroup>
+    <!-- .NET 8.0 target -->
     <TargetFramework>net8.0</TargetFramework>
+    <!-- Functions v4 runtime -->
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <!-- Executable for isolated worker -->
     <OutputType>Exe</OutputType>
+    <!-- Auto-import common namespaces -->
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Enable null safety features -->
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- ASP.NET Core framework -->
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <!-- Core telemetry -->
     <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.23.0" />
+    <!-- Core Functions worker -->
     <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="2.1.0" />
+    <!-- Functions integration -->
     <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="2.0.0" />
+    <!-- HTTP with ASP.NET Core -->
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore" Version="2.0.2" />
+    <!-- Build tools -->
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="2.0.5" />
+    <!-- PostgreSQL driver -->
+    <PackageReference Include="Npgsql" Version="9.0.4" />
+    <!-- JSON serialization -->
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Function attributes and context -->
+    <Using Include="Microsoft.Azure.Functions.Worker" />
+    <!-- HTTP request/response types -->
+    <Using Include="Microsoft.Azure.Functions.Worker.Http" />
   </ItemGroup>
 
 </Project>
